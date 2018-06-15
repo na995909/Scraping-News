@@ -1,6 +1,6 @@
 var axios = require("axios");
 var cheerio = require("cheerio");
-var db = require("../models/Index.js");
+var db = require("../models/index.js");
 var request = require("request");
 
 
