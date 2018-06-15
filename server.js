@@ -8,7 +8,7 @@ var mongoose = require("mongoose");
 var db = require("./models");
 
 // Set port to listen on
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 
 // Initialize Express
 var app = express();
@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Express static directory
 app.use(express.static("public"));
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL || "mongodb://localhost/mongoHeadlines";
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
