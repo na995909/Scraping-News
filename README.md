@@ -36,3 +36,5 @@ The app  accomplishes the following:
      * URL - the url to the original article
 
   2. Users are also can  leave comments on the articles displayed and revisit them later. The comments get be saved to the database as well and associated with their articles. Users can also  delete comments left on articles. All stored comments are visible to every user.
+ 
+ Link to the app:https://scraping-news12345.herokuapp.com/
